@@ -1,7 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: sigilai
- * Date: 11/8/18
- * Time: 8:35 PM
- */
+<html>
+<head>
+    <title>Wlcome to Spotify</title>
+</head>
+<body>
+
+<div id="inputContainer">
+
+
+</div>
+
+
+</body>
+
+</html>
