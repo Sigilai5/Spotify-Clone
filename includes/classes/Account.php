@@ -26,6 +26,13 @@
 
         }
 
+        public function getError($error){
+            if (!in_array($error,$this->errorArray)){
+                $error ="";
+            }
+            return "<span class='errorMessage'>$error</span>";
+        }
+
         private function validateUsername($un){
 
             if(strlen($un) > 25 || strlen($un) < 5) {
