@@ -20,10 +20,11 @@ function getInputValue($name){
 <html>
 <head>
     <title>Jukwaa</title>
-    <link rel="stylesheet" href="assets/c">
+    <link rel="stylesheet" href="assets/css/register.css">
 </head>
 <body>
-
+<div id="background">
+    <div id="loginContainer">
 <div id="inputContainer">
 <form id="loginForm" action="register.php" method="POST">
     <h2>Login To your account!</h2>
@@ -36,10 +37,14 @@ function getInputValue($name){
 
     <p>
         <label for="loginPassword">Password</label>
-        <input id="loginPassword" name="loginPassword" type="password" required>
+        <input id="loginPassword" name="loginPassword" type="password" placeholder="Password" required>
     </p>
 
     <button type="submit" name="loginButton">LOG IN</button>
+
+    <div class="hasAccountText">
+        <span id="hideLogin">Don't have an account? Signup here.</span>
+    </div>
 
 </form>
 
@@ -93,11 +98,16 @@ function getInputValue($name){
 
         <button type="submit" name="registerButton">SIGN UP</button>
 
+        <div class="hasAccountText">
+            <span id="hideRegister">Already have an account? Login here.</span>
+        </div>
+
     </form>
 
 </div>
+    </div>
 
-
+</div>
 </body>
 
 </html>
