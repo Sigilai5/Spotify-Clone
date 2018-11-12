@@ -19,12 +19,30 @@ else{
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jukwaa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 
 <div id="nowPlayingBarContainer">
+    <div id="nowPlayingBar">
 
+        <div id="nowPlayingLeft">
+
+
+        </div>
+
+        <div id="nowPlayingCenter">
+
+
+        </div>
+
+        <div id="nowPlayingRight">
+
+
+        </div>
+
+    </div>
 
 </div>
 
