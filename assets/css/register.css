@@ -6,7 +6,7 @@ html,body{
 
 #background{
     background-color: #000;
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/mic.jpeg");
     background-position: center;
     background-size: cover;
     display: table;
@@ -80,6 +80,7 @@ html,body{
     color: #a0a0a0;
     font-size: 13px;
     margin-top: 15px;
+    display: block;
 }
 
 #inputContainer button {
@@ -101,8 +102,24 @@ html,body{
 .hasAccountText span{
     font-weight: bold;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .hasAccountText {
     text-align: center;
+}
+
+#registerForm,#loginForm{
+    display: none;
+}
+h1{
+    padding-top: 20%;
+    text-align: center;
+    font-size: 80px;
+}
+
+#inputContainer .errorMessage {
+    color: red;
+    font-size: 12px;
+    display: block;
 }
