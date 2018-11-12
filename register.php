@@ -3,7 +3,7 @@ include ("includes/config.php");
 include ("includes/classes/Account.php");
 include ("includes/classes/Constants.php");
 
-    $account = new Account();
+$account = new Account($con);
 
 
 include ("includes/handlers/register-handler.php");
@@ -20,6 +20,7 @@ function getInputValue($name){
 <html>
 <head>
     <title>Jukwaa</title>
+    <link rel="stylesheet" href="assets/c">
 </head>
 <body>
 
@@ -27,7 +28,7 @@ function getInputValue($name){
 <form id="loginForm" action="register.php" method="POST">
     <h2>Login To your account!</h2>
     <p>
-
+        <?php echo $account->getError(Constants::$loginFailed);?>
         <label for="loginUsername">Username</label>
         <input id="loginUsername" name="loginUsername" type="text" placeholder="Username" value="<?php getInputValue('username')?>" required>
 
@@ -47,6 +48,7 @@ function getInputValue($name){
         <h2>Register To your account!</h2>
         <p>
             <?php echo $account->getError(Constants::$usernameCharacters);?>
+            <?php echo $account->getError(Constants::$usernameTaken);?>
             <label for="username">Username</label>
             <input id="username" name="username" type="text" placeholder="Username" value="<?php getInputValue('username')?>" required>
 
@@ -66,6 +68,7 @@ function getInputValue($name){
         <p>
             <?php echo $account->getError(Constants::$emailsDoNotMatch);?>
             <?php echo $account->getError(Constants::$emailInvalid);?>
+            <?php echo $account->getError(Constants::$emailTaken);?>
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="Email" value="<?php getInputValue('username')?>" required>
 
