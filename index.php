@@ -23,7 +23,13 @@ else{
 <body>
 
 
-<h1>You made it!!</h1>
+<div id="nowPlayingBarContainer">
+
+
+</div>
+
+
+
 
 </body>
 </html>
