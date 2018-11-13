@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9f644fe-1af5-46b9-8641-c92efeb64420" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/nowPlayingBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/nowPlayingBar.php" afterDir="false" />
-    </list>
+    <list default="true" id="d9f644fe-1af5-46b9-8641-c92efeb64420" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,11 +162,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="123" />
-    <option name="y" value="93" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="370" />
+    <option name="y" value="348" />
     <option name="width" value="842" />
-    <option name="height" value="805" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -189,13 +185,7 @@
             <path>
               <item name="Spotify-Clone" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spotify-Clone" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spotify-Clone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spotify-Clone" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,18 +249,18 @@
       <workItem from="1541840307621" duration="5976000" />
       <workItem from="1541953795349" duration="639000" />
       <workItem from="1542012424742" duration="3267000" />
-      <workItem from="1542028936115" duration="58575000" />
+      <workItem from="1542028936115" duration="58823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77313000" />
+    <option name="totallyTimeSpent" value="77561000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
+    <frame x="123" y="132" width="842" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49935815" weight="0.61518323" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49935815" visible="true" weight="1.0" />
       <window_info id="Structure" order="1" sideWeight="0.5006418" side_tool="true" weight="0.5170157" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32984293" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,7 +273,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.42676312" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.42611682" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
