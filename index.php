@@ -4,7 +4,7 @@
 <div class="gridViewContainer">
 
 <?php
-$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 3");
+$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND()"); //LIMIT 3
 
 while ($row = mysqli_fetch_array($albumQuery)){
 
