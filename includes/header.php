@@ -23,8 +23,19 @@ else{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jukwaa</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </head>
 <body>
+
+<script>
+    var audioElement = new Audio();
+    audioElement.setTrack("assets/music/bensound-acousticbreeze.map3");
+    audioElement.audio.play();
+
+</script>
+
 
 <div id="mainContainer">
     <div id="topContainer">
