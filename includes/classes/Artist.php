@@ -1,7 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sigilai
- * Date: 11/13/18
- * Time: 2:24 PM
- */
+class Artist {
+
+    private $con;
+    private $id;
+
+    public function __construct($con,$id){
+        $this->con = $con;
+        $this->id = $id;
+
+    }
+
+    public function getname(){
+        $artistQuery = mysqli_query($this->con, "SELECT name FROM artists WHERE id='$this->id'");
+        $artist = mysqli_fetch_array($artistQuery);
+        return $artist['name'];
+
+
+    }
+
+
+
+}
+
+
+?>

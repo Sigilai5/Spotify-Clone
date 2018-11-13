@@ -1,5 +1,6 @@
 <?php
 include ("includes/config.php");
+include ("classes/Artist.php");
 
 //session_destroy();
 
