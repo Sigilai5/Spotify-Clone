@@ -21,7 +21,42 @@ $jsonArray = json_encode($resultArray);
 
     function setTrack(trackId, newPlaylist, play) {
 
-        audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
+        // audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
+
+                                    // GET TRACK
+        $.post("includes/handlers/ajax/getSongJson.php", {songId: trackId},function (data) {
+
+            //convert string data to object
+            var track = JSON.parse(data)
+
+            $(".trackName span").text(track.title);
+
+                                   // GET SONG
+            $.post("includes/handlers/ajax/getArtistJson.php", {artistId: track.artist},function (data) {
+
+                //convert string data to object
+                var artist = JSON.parse(data);
+
+                $(".artistName span").text(artist.name);
+
+            });
+                                 // GET ALBUM
+            $.post("includes/handlers/ajax/getAlbumJson.php", {albumId: track.album},function (data) {
+
+                //convert string data to object
+                var album = JSON.parse(data);
+
+                console.log(album.artworkPath)
+                $(".albumLink img").attr("src",album.artworkPath);
+
+            });
+
+            audioElement.setTrack(track.path)
+           playSong();
+        });
+
+
+
 
         if (play == true){
             audioElement.play();
@@ -30,6 +65,13 @@ $jsonArray = json_encode($resultArray);
     }
 
     function playSong() {
+        console.log(audioElement.audio.currentTime);
+        if (audioElement.audio.currentTime == 0){
+            console.log("UPDATE TIME");
+        } else {
+            console.log("DON'T UPDATE TIME");
+        }
+
         $(".controlButton.play").hide();
         $(".controlButton.pause").show();
         audioElement.play();
@@ -55,12 +97,12 @@ $jsonArray = json_encode($resultArray);
 
                 <div class="trackinfo">
                     <span class="trackName">
-                        <span>Happy Birthday</span>
+                        <span></span>
 
                     </span>
 
                     <span class="artistName">
-                        <span>Brian Sigilai</span>
+                        <span></span>
                     </span>
 
                 </div>
