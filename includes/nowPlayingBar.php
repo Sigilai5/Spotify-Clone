@@ -194,21 +194,18 @@ $jsonArray = json_encode($resultArray);
                 //convert string data to object
                 var album = JSON.parse(data);
 
-                console.log(album.artworkPath)
+
                 $(".albumLink img").attr("src",album.artworkPath);
 
             });
 
             audioElement.setTrack(track);
 
+            if (play == true){
+                playSong();
+            }
+
         });
-
-
-
-
-        if (play == true){
-            audioElement.play();
-        }
 
     }
 

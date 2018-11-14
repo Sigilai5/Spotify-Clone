@@ -1,4 +1,4 @@
-<?php include ("includes/header.php");
+<?php include('includes/includedFiles.php');
 /**
  * Created by PhpStorm.
  * User: sigilai
@@ -95,4 +95,4 @@ $artist = $album->getArtist();
 </div>
 
 
-<?php include ("includes/footer.php"); ?>
+
