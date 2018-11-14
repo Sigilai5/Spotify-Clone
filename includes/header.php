@@ -8,6 +8,7 @@ include ("classes/Song.php");
 
 if(isset($_SESSION['userLoggedIn'])){
     $userLoggedIn = $_SESSION['userLoggedIn'];
+    echo "<script>userLoggedIn = '$userLoggedIn';</script>";
 }
 else{
     header("Location: register.php");
@@ -30,9 +31,9 @@ else{
 <body>
 
 <script>
-    var audioElement = new Audio();
-    audioElement.setTrack("assets/music/bensound-acousticbreeze.map3");
-    audioElement.audio.play();
+    // var audioElement = new Audio();
+    // audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
+    // audioElement.audio.play();
 
 </script>
 
