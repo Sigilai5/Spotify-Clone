@@ -12,6 +12,7 @@ if (isset($_POST['songId'])){
 
     $query = mysqli_query($con,"SELECT * FROM Songs WHERE  id='$songid'");
 
+
     //convert to array
     $resultArray = mysqli_fetch_array($query);
 

@@ -185,8 +185,8 @@ $jsonArray = json_encode($resultArray);
                 //convert string data to object
                 var artist = JSON.parse(data);
 
-                $(".artistName span").text(artist.name);
-                $(".artistName span").attr("onclick", "openPage('artist.php?id=" + artist.id + "')");
+                $(".trackinfo .artistName span").text(artist.name);
+                $(".trackinfo .artistName span").attr("onclick", "openPage('artist.php?id=" + artist.id + "')");
 
             });
                                  // GET ALBUM
@@ -196,9 +196,9 @@ $jsonArray = json_encode($resultArray);
                 var album = JSON.parse(data);
 
 
-                $(".albumLink img").attr("src",album.artworkPath);
-                $(".albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
-                $(".trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
+                $(".content .albumLink img").attr("src",album.artworkPath);
+                $(".content .albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
+                $(".trackinfo .trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
 
             });
 
@@ -298,6 +298,8 @@ $jsonArray = json_encode($resultArray);
             </div>
 
         </div>
+
+        <p id="plays">Plays: </p>
 
         <div id="nowPlayingRight">
             <div class="volumeBar">
