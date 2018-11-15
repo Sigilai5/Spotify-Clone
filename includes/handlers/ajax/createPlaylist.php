@@ -13,8 +13,15 @@ if (isset($_POST['name']) && isset($_POST['username'])){
     $username = $_POST['username'];
     $date = date("Y-m-d");
 
-    $query = mysqli_query($con,"INSERT INTO playlists VALUES('','$name','$username','$date')");
+    $checkUsernameQuery = mysqli_query($con,"SELECT name FROM playlists WHERE name='$name'");
+    if (mysqli_num_rows($checkUsernameQuery) != 0){
+        echo "Oops! playlist ".$name." already exists";
+        return;
+    }
+    else{
 
+    $query = mysqli_query($con,"INSERT INTO playlists VALUES('','$name','$username','$date')");
+    }
 }
 else{
     echo "Name or username parameters not passed into file";
