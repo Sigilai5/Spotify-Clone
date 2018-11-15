@@ -30,12 +30,17 @@ function openPage(url) {
 /**CREATE PLAYLIST**/
 
 function createPlaylist(username) {
-    var alert = prompt("Please enter the name of your playlist");
+    var playlist_name = prompt("Please enter the name of your playlist");
 
-    if (alert != null){
+    if (playlist_name != null){
 
-        $.post("includes/handlers/ajax/createPlaylist.php", {name:alert,username: username}).done(function () {
+        $.post("includes/handlers/ajax/createPlaylist.php", {name:playlist_name,username: userLoggedIn}).done(function (error) {
             //DO SOMETHING WHEN AJAX RETURNS
+            if (error != ""){
+                alert(error);
+                return;
+            }
+
             openPage("yourMusic.php")
         });
 
