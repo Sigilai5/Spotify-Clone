@@ -54,6 +54,11 @@ function updateVolumeProgressBar(audio) {
 
 }
 
+function playFirstSong() {
+    setTrack(tempPlaylist[0],tempPlaylist, true); //This function wil play songs in artsist page
+}
+
+
 function Audio() {
 
     this.currentlyPlaying;
