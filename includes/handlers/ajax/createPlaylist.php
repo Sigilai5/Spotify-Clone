@@ -15,7 +15,7 @@ if (isset($_POST['name']) && isset($_POST['username'])){
 
     $checkUsernameQuery = mysqli_query($con,"SELECT name FROM playlists WHERE name='$name'");
     if (mysqli_num_rows($checkUsernameQuery) != 0){
-        echo "Oops! playlist ".$name." already exists";
+
         return;
     }
     else{
