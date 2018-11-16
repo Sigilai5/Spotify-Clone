@@ -66,13 +66,15 @@ function openPage(url) {
 function removeFromPlaylist(button,playlistId) {
     var songId = $(button).prevAll(".songId").val();
 
-    $.post("includes/handlers/ajax/removeSongFromPlaylist.php", {playlistId:playlistId,songId: songId}).done(function (error) {
+    $.post("includes/handlers/ajax/removeSongFromPlaylist.php", {playlistId: playlistId,songId: songId}).done(function(error) {
         //DO SOMETHING WHEN AJAX RETURNS
-        if (error != ""){
-            alert(error);
-            return;
-        }
 
+        // if (error != ""){
+        //     alert(error);
+        //     return;
+        // }
+
+        //TODO:resolve above error
 
         openPage("playlist.php?id=" + playlistId);
     });
