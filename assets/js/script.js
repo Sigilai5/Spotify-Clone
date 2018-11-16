@@ -43,6 +43,12 @@ $(document).on("change", "select.playlist",function () {
 
 });
 
+function logout() {
+    $.post("includes/handlers/ajax/logout.php",function () {
+       location.reload(); //THIS WILL TRIGGER THE HEADER TO KNOW IF USER IS LOGGED IN OR NOT
+    });
+}
+
 
 function openPage(url) {
 
