@@ -61,6 +61,26 @@ function openPage(url) {
     history.pushState(null,null,url);
 }
 
+/**REMOVE SONG FROM PLAYLIST**/
+
+function removeFromPlaylist(button,playlistId) {
+    var songId = $(button).prevAll(".songId").val();
+
+    $.post("includes/handlers/ajax/removeSongFromPlaylist.php", {playlistId:playlistId,songId: songId}).done(function (error) {
+        //DO SOMETHING WHEN AJAX RETURNS
+        if (error != ""){
+            alert(error);
+            return;
+        }
+
+
+        openPage("playlist.php?id=" + playlistId);
+    });
+
+
+}
+
+
 /**CREATE PLAYLIST**/
 
 function createPlaylist(username) {
