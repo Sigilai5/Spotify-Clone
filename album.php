@@ -67,7 +67,8 @@ $artist = $album->getArtist();
                     </div>   
                     
                     <div class='trackOptions'>
-                    <img class='optionsButton' src='assets/images/icons/more.png'>
+                    <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
+                    <img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
                     </div> 
                     <div class='trackDuration'>
                     <span class='duration'>" . $albumSong->getDuration() . "</span>
@@ -91,8 +92,14 @@ $artist = $album->getArtist();
 
     </ul>
 
-
 </div>
+
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername());?>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3 </div>
+</nav>
 
 
 

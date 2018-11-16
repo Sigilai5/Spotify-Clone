@@ -24,7 +24,7 @@ else{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jukwaa</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/script.js"></script>
 
 </head>
