@@ -121,6 +121,27 @@ function removeFromPlaylist(button,playlistId) {
 }
 
 
+/**CREATE ALBUM**/
+
+function createAlbum(username) {
+    var album_name = prompt("Please enter the name of your album");
+
+    if (album_name != null){
+
+        $.post("includes/handlers/ajax/createPlaylist.php", {name:album_name,username: userLoggedIn}).done(function (error) {
+            //DO SOMETHING WHEN AJAX RETURNS
+            if (error != ""){
+                alert(error);
+                return;
+            }
+
+            openPage("yourMusic.php")
+        });
+
+    }
+
+}
+
 /**CREATE PLAYLIST**/
 
 function createPlaylist(username) {

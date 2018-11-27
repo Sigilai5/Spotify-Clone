@@ -12,7 +12,7 @@ include ("includes/includedFiles.php");
     <h2>My Album</h2>
 
     <div class="buttonItems">
-        <button class="button green" onclick="createPlaylist('Brian')">NEW ALBUM</button>
+        <button class="button green" onclick="createAlbum('Brian')">NEW ALBUM</button>
     </div>
 
     <?php
@@ -37,18 +37,6 @@ include ("includes/includedFiles.php");
 
     ?>
 
-    <?php
-
-    $sql = "SELECT name FROM genres";
-    $result = mysqli_query($sql);
-
-    echo "<select name='genre'>";
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<option value='" . $row['name'] ."'>" . $row['name'] ."</option>";
-    }
-    echo "</select>";
-
-    ?>
 
 </div>
 

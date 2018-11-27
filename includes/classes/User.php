@@ -10,7 +10,6 @@ class User{
 
     private $con;
     private $username;
-    private $userId;
 
     public function __construct($con , $username){
         $this->con = $con;
