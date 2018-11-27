@@ -21,7 +21,7 @@ function getInputValue($name){
 <head>
     <title>Jukwaa</title>
     <link rel="stylesheet" href="assets/css/register.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/js.js"></script>
 </head>
 <body>

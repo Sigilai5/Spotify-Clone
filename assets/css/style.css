@@ -528,6 +528,9 @@ input:focus{
     color: #2ebd59;
     font-weight: 300;
 }
+.profilePic{
+    text-align: center;
+}
 
 
 

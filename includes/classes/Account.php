@@ -53,7 +53,7 @@
         private function insertUserDetails($un,$fn,$ln,$em,$pw){
             //TODO: Change md5 to SHA256
             $encryptedPw = md5($pw);
-            $profilePic = "assets/images/profile-pics/avatar.png";
+            $profilePic = "assets/images/profile-pics/avatar.jpg";
             $date = date("Y-m-d");
 
             $result = mysqli_query($this->con,"INSERT INTO users VALUES ('','$un','$fn','$ln','$em','$encryptedPw','$date','$profilePic')");
