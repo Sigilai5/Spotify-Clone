@@ -1,5 +1,5 @@
 <?php include('includes/includedFiles.php');?>
-<h1 class="pageheadingBig">You Might Also Like</h1>
+<h1 class="pageheadingBig">Albums</h1>
 
 <div class="gridViewContainer">
 
