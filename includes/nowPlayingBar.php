@@ -299,7 +299,6 @@ $jsonArray = json_encode($resultArray);
 
         </div>
 
-        <p id="plays">Plays: </p>
 
         <div id="nowPlayingRight">
             <div class="volumeBar">

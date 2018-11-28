@@ -71,9 +71,11 @@ $artist = $album->getArtist();
                     <img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
                     </div> 
                     
-                    <div class='trackDuration'>
-                    <span class='duration'>" . $albumSong->getDuration() . "</span>
+                    <div class='trackPlays'>
+                    <span class='plays'>" . $albumSong->getPlays() . " views</span>
+                    
                     </div> 
+                                      
                             
             
             </li>";

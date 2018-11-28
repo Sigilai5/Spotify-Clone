@@ -8,16 +8,16 @@
 
 include ("../../config.php");
 
-if (isset($_POST['name']) && isset($_POST['username'])){
+if (isset($_POST['title']) && isset($_POST['username'])){
 
-    $title = $_POST['name'];
+    $title = $_POST['title'];
     $username = $_POST['username'];
     $date = date("Y-m-d");
     $artist=1;
     $genre=2;
     $artworkPath="assets/images/artwork/album.png";
 
-    $checkUsernameQuery = mysqli_query($con,"SELECT name FROM albums WHERE title='$title'");
+    $checkUsernameQuery = mysqli_query($con,"SELECT title FROM albums WHERE title='$title'");
     if (mysqli_num_rows($checkUsernameQuery) != 0){
 
         echo "Album already exists!";
