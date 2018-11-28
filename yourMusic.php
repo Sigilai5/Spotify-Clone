@@ -8,7 +8,6 @@
 include ("includes/includedFiles.php");
 
 ?>
-
 <div class="playlistsContainer">
 
     <div class="gridViewContainer">

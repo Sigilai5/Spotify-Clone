@@ -4,7 +4,7 @@ class Album {
     private $con;
     private $id;
     private $title;
-    private $artistId;
+    private $artist;
     private $genre;
     private $artworkPath;
 
@@ -17,7 +17,7 @@ class Album {
 
         $this->albumId = $album['id'];
         $this->title = $album['title'];
-        $this->artistId = $album['artist'];
+        $this->artist = $album['artist'];
         $this->genre = $album['genre'];
         $this->artworkPath = $album['artworkPath'];
 
@@ -30,7 +30,7 @@ class Album {
      return $this->title;
     }
     public function getArtist(){
-        return new Artist($this->con, $this->artistId);
+        return $this->artist;
     }
     public function getGenre(){
         return $this->genre;

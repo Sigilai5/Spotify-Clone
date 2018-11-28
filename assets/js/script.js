@@ -134,11 +134,21 @@ function createAlbum(username) {
         openPage("yourAlbum.php")
     });
 
-    var album_name = prompt("Please enter the name of your album");
+//Get
+//     var bla = $('#txt_name').val();
+
+//Set
+//     $('#txt_name').val(bla);
+
+    var album_name = $('.title').val();
+    console.log(album_name)
+
+    var genre = $('.genreDropdown').val();
+    console.log(genre)
 
     if (album_name != null){
 
-        $.post("includes/handlers/ajax/createAlbum.php", {title:album_name,username: userLoggedIn}).done(function (error) {
+        $.post("includes/handlers/ajax/createAlbum.php", {title:album_name,username: userLoggedIn,genreName:genre}).done(function (error) {
             //DO SOMETHING WHEN AJAX RETURNS
             if (error != ""){
                 alert(error);
@@ -156,7 +166,6 @@ function createAlbum(username) {
 
 function createPlaylist(username) {
     var playlist_name = prompt("Please enter the name of your playlist");
-
     if (playlist_name != null){
 
         $.post("includes/handlers/ajax/createPlaylist.php", {name:playlist_name,username: userLoggedIn}).done(function (error) {

@@ -15,6 +15,8 @@ if (isset($_GET['id'])){
 
 $artist = new Artist($con, $artistId);
 
+$name = $artist->getname();
+
 ?>
 
 
@@ -106,7 +108,7 @@ $artist = new Artist($con, $artistId);
 <div class="gridViewContainer borderBottom">
 <h2>ALBUMS</h2>
     <?php
-    $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist=$artistId"); //LIMIT 3
+    $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$name'"); //LIMIT 3
 
     while ($row = mysqli_fetch_array($albumQuery)){
 

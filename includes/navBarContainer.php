@@ -25,10 +25,13 @@
                 <span role="link" tabindex="0" onclick="openPage('popular.php')" class="navItemLink">Popular Songs</span>
             </div>
             <div class="navItem">
-                <span role="link" tabindex="0" onclick="openPage('yourMusic.php')" class="navItemLink">My Music</span>
+                <span role="link" tabindex="0" onclick="openPage('yourMusic.php')" class="navItemLink">My Playlist</span>
             </div>
             <div class="navItem">
-                <span role="link" tabindex="0" onclick="openPage('yourAlbum.php')" class="navItemLink">My Album</span>
+                <span role="link" tabindex="0" onclick="openPage('yourAlbum.php')" class="navItemLink">My Albums</span>
+            </div>
+            <div class="navItem">
+                <span role="link" tabindex="0" onclick="openPage('yourAlbum.php')" class="navItemLink">My Albums</span>
             </div>
             <div class="navItem">
                 <span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>

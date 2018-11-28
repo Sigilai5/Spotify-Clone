@@ -9,16 +9,15 @@ include ("includes/includedFiles.php");
 ?>
 
 <div class="gridViewContainer">
-    <h2>My Album</h2>
-
     <div class="buttonItems">
-        <button class="button green" onclick="createAlbum('Brian')">NEW ALBUM</button>
+        <button class="button green" ><a href="newAlbum.php">NEW ALBUM</a></button>
     </div>
+    <h2>My Albums</h2>
 
     <?php
-    $user_id = $userLoggedIn->getUserId();
+    $user_name = $userLoggedIn->getUsername();
 
-    $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$user_id'"); //LIMIT 3
+    $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$user_name'"); //LIMIT 3
 
     while ($row = mysqli_fetch_array($albumQuery)){
 

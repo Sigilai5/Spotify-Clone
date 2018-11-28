@@ -8,13 +8,13 @@
 
 include ("../../config.php");
 
-if (isset($_POST['title']) && isset($_POST['username'])){
+if (isset($_POST['genreName']) && isset($_POST['title']) && isset($_POST['username'])){
 
     $title = $_POST['title'];
     $username = $_POST['username'];
     $date = date("Y-m-d");
-    $artist=1;
-    $genre=2;
+    $artist=$username;
+    $genre=$_POST['genreName'];
     $artworkPath="assets/images/artwork/album.png";
 
     $checkUsernameQuery = mysqli_query($con,"SELECT title FROM albums WHERE title='$title'");

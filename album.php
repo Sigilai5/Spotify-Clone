@@ -35,7 +35,7 @@ $artist = $album->getArtist();
     <div class="rightSection">
         <h2><?php echo $album->getAlbumId(); ?></h2>
         <h2><?php echo $album->getTitle(); ?></h2>
-        <p>By <?php echo $artist->getname(); ?></p>
+        <p>By <?php echo $album->getArtist(); ?></p>
         <p><?php echo $album->getNumberOfSongs(); ?> songs</p>
     </div>
 
