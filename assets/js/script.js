@@ -163,7 +163,7 @@ function createAlbum(username) {
 }
 
 
-/**CREATE ALBUM**/
+/**UPLOAD MUSIC**/
 
 function uploadMusic(username) {
 
@@ -175,19 +175,24 @@ function uploadMusic(username) {
     console.log(album)
     var genre = $('.genreDropdown').val();
     console.log(genre)
-    var filename = $('input[type=file]').val().split('\\').pop();
-    console.log(filename)
+    var path ="assets/music/" + $('input[type=file]').val().split('\\').pop();
+    console.log(path)
 
-    if (title != null && description != null && album!=null && genre!=null && filename!=null){
+    var fd = new FormData(this);
+    fd.append('file',$('#file')[0].files[0]);
+    console.log(fd)
 
-        $.post("includes/handlers/ajax/submitMusic.php", {title:title,description: description,artist:userLoggedIn,album:album,genre:genre,path:filename}).done(function (error) {
+
+    if (title != null){
+
+        $.post("includes/handlers/ajax/submitMusic.php", {title:title,description: description,artist:userLoggedIn,album:album,genre:genre,path:path}).done(function (error) {
             //DO SOMETHING WHEN AJAX RETURNS
             if (error != ""){
                 alert(error);
                 return;
             }
 
-            openPage("yourAlbum.php")
+            openPage("uploadMusic.php")
         });
 
     }

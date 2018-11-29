@@ -8,7 +8,10 @@
 
 include ("includes/includedFiles.php");
 $username = $userLoggedIn->getUsername();
+echo $username;
 ?>
+
+
 <div class="userDetails">
 
     <div class="container">
@@ -26,9 +29,9 @@ $username = $userLoggedIn->getUsername();
 
             $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$username'");
 
-            echo "<select class='albumDropdown'>";
+            echo "<select class='albumDropdown' name='album'>";
             while ($row = mysqli_fetch_array($albumQuery)){
-                echo "<option value='" . $row['id'] ."' name='" . $row['id'] ."'>" . $row['title'] ."</option>";
+                echo "<option value='" . $row['id'] ."' name='album'>" . $row['title'] ."</option>";
 
             }
 
@@ -40,24 +43,23 @@ $username = $userLoggedIn->getUsername();
 
             $albumQuery = mysqli_query($con, "SELECT * FROM genres");
 
-            echo "<select class='genreDropdown'>";
+            echo "<select class='genreDropdown' name='genre'>";
             while ($row = mysqli_fetch_array($albumQuery)){
-                echo "<option value='" . $row['id'] ."' name='" . $row['id'] ."'>" . $row['name'] ."</option>";
+                echo "<option value='" . $row['id'] ."' name='genre'>" . $row['name'] ."</option>";
             }
 
             echo "</select>";
 
             ?>
 
-            <input type="file" name="uploaded_file">
-            <button class="button" onclick="uploadMusic('Brian')">UPLOAD</button>
+            <input type="file" name="song" id="file">
+            <button class="button" name="upload" onclick="uploadMusic('bria')">UPLOAD</button>
         </form>
     </div>
 
 
 </div>
 
-<?php
-$userId = $userLoggedIn->getUserId();
-echo $userId;
-?>
+
+
+

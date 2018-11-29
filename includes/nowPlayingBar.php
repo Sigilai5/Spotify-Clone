@@ -296,8 +296,18 @@ $jsonArray = json_encode($resultArray);
                 </div>
 
             </div>
+            <button class="controlButton tip" title="Tip Artist" id="tip">
+                <img src="assets/images/icons/tip.png" alt="Tip Artist">
+            </button>
+            <button class="controlButton like" title="Like" id="like">
+                <img src="assets/images/icons/like1.png" alt="Like">
+            </button>
+            <button class="controlButton love" title="Love" id="love">
+                <img src="assets/images/icons/love1.png" alt="Love">
+            </button>
 
         </div>
+
 
 
         <div id="nowPlayingRight">
