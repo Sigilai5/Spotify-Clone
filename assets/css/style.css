@@ -532,7 +532,7 @@ input:focus{
     text-align: center;
 }
 
-.genreDropdown{
+.genreDropdown,.albumDropdown{
     width: 760px;
     height: 50px;
     background: #282828;

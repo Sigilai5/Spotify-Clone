@@ -29,7 +29,7 @@ include ("includes/includedFiles.php");
         else{
 
             echo "<div class='buttonItems'>
-            <button class='button green'>ADD NEW MUSIC</button>
+            <button class='button green'><a href='uploadMusic.php'> ADD NEW MUSIC</a></button>
         </div>";
         }
 

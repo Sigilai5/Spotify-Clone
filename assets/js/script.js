@@ -162,6 +162,38 @@ function createAlbum(username) {
 
 }
 
+
+/**CREATE ALBUM**/
+
+function uploadMusic(username) {
+
+    var title = $('.title').val();
+    console.log(title)
+    var description = $('.description').val();
+    console.log(description)
+    var album = $('.albumDropdown').val();
+    console.log(album)
+    var genre = $('.genreDropdown').val();
+    console.log(genre)
+    var filename = $('input[type=file]').val().split('\\').pop();
+    console.log(filename)
+
+    if (title != null && description != null && album!=null && genre!=null && filename!=null){
+
+        $.post("includes/handlers/ajax/submitMusic.php", {title:title,description: description,artist:userLoggedIn,album:album,genre:genre,path:filename}).done(function (error) {
+            //DO SOMETHING WHEN AJAX RETURNS
+            if (error != ""){
+                alert(error);
+                return;
+            }
+
+            openPage("yourAlbum.php")
+        });
+
+    }
+
+}
+
 /**CREATE PLAYLIST**/
 
 function createPlaylist(username) {
