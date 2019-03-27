@@ -177,7 +177,9 @@ $jsonArray = json_encode($resultArray);
             //convert string data to object
             var track = JSON.parse(data)
 
+
             $(".trackName span").text(track.title);
+            $(".trackPlays span").text(track.plays);
 
                                    // GET ARTIST
             $.post("includes/handlers/ajax/getArtistJson.php", {artistId: track.artist},function (data) {
@@ -246,6 +248,10 @@ $jsonArray = json_encode($resultArray);
                         <span role="link" tabindex="0"></span>
 
                     </span>
+<!--                    <span class="trackPlays">-->
+<!--                        <span role="link" tabindex="0">plays</span><br>-->
+<!---->
+<!--                    </span>-->
 
                     <span class="artistName">
                         <span role="link" tabindex="0"></span>
@@ -297,7 +303,7 @@ $jsonArray = json_encode($resultArray);
 
             </div>
             <button class="controlButton tip" title="Tip Artist" id="tip">
-                <img src="assets/images/icons/tip.png" alt="Tip Artist">
+                <a href="www.paypal.com"><img src="assets/images/icons/tip.png" alt="Tip Artist"></a>
             </button>
             <button class="controlButton like" title="Like" id="like">
                 <img src="assets/images/icons/like1.png" alt="Like">

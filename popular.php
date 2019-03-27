@@ -8,19 +8,23 @@
 include('includes/includedFiles.php');
 
 ?>
+<script src="assets/js/script.js"></script>
 
-<div class="tracklistContainer">
-    <h2>ALL SONGS</h2>
+<div class="tracklistContainer borderBottom">
+    <h2>POPULAR SONGS</h2>
     <ul class="tracklist">
 
         <?php
-        $songIdArray = $albumArtist->getSongIds();
+        $songQuery = mysqli_query($con,"SELECT * FROM Songs ORDER BY plays DESC ");
+
+        $songIdArray = array();
 
         $i = 1;
-        foreach ($songIdArray as $songId){
+        while($row = mysqli_fetch_array($songQuery)){
 
+            array_push($songIdArray,$row['id']);
 
-            $albumSong = new Song($con, "SELECT * FROM Songs ORDER BY plays");
+            $albumSong = new Song($con, $row['id']);
             $albumArtist = $albumSong->getArtist();
 
             echo "<li class='tracklistRow'>
@@ -38,11 +42,9 @@ include('includes/includedFiles.php');
                     <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
                     <img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
                     </div> 
-                    
                     <div class='trackDuration'>
-                    <span class='duration'>" . $albumSong->getDuration() . "</span>
-              
-                    </div> 
+						<span class='duration'>" . $albumSong->getPlays() . " views</span>
+					</div>
                             
             
             </li>";
@@ -57,10 +59,7 @@ include('includes/includedFiles.php');
         <script>
             var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
             tempPlaylist = JSON.parse(tempSongIds);
+
         </script>
-
-
     </ul>
-
-
 </div>

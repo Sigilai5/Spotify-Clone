@@ -19,10 +19,12 @@ function getInputValue($name){
 
 <html>
 <head>
+
     <title>Jukwaa</title>
     <link rel="stylesheet" href="assets/css/register.css">
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/js.js"></script>
+
 </head>
 <body>
 <?php

@@ -107,6 +107,7 @@ $name = $artist->getname();
 
 <div class="gridViewContainer borderBottom">
 <h2>ALBUMS</h2>
+
     <?php
     $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$name'"); //LIMIT 3
 

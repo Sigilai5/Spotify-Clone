@@ -33,7 +33,7 @@ $(function () {
         timer = setTimeout(function () {
             var val = $(".searchInput").val();
             openPage("search.php?term=" + val);
-        }, 2000);
+        }, 1000);
     });
 
 });
@@ -83,7 +83,7 @@ $(function () {
                     <img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
                     </div> 
                     <div class='trackDuration'>
-                    <span class='duration'>" . $albumSong->getDuration() . "</span>
+                    <span class='duration'>" . $albumSong->getPlays() . " views</span>
                     </div> 
                             
             

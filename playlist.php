@@ -70,7 +70,7 @@ $owner = new User($con, $playlist->getOwner());
                     </div> 
                     
                     <div class='trackDuration'>
-                    <span class='duration'>" . $playlistSong->getDuration() . "</span>
+                    <span class='duration'>" . $playlistSong->getPlays() . "</span>
                     </div> 
                             
             

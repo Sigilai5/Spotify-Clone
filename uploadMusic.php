@@ -16,7 +16,7 @@ echo $username;
 
     <div class="container">
         <h2>NEW MUSIC</h2>
-        <form method="post" action="uploadMusic.php" enctype="multipart/form-data">
+        <form method="POST" action="uploadMusic.php"  enctype="multipart/form-data">
             <label>Song Title:</label>
             <input type="text" class="title" name="title" placeholder="Song title... ">
 
@@ -53,13 +53,50 @@ echo $username;
             ?>
 
             <input type="file" name="song" id="file">
-            <button class="button" name="upload" onclick="uploadMusic('bria')">UPLOAD</button>
+            <button class="button" type="submit" name="upload">UPLOAD</button>
         </form>
     </div>
 
 
 </div>
 
+
+<?php
+
+// Initialize message variable
+$msg = "";
+
+// If upload button is clicked ...
+if (isset($_POST['upload'])) {
+
+    // Get details
+    $title = mysqli_real_escape_string($con, $_POST['title']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
+    $artist = mysqli_real_escape_string($con, $_POST['artist']);
+    $album = mysqli_real_escape_string($con, $_POST['album']);
+    $genre = mysqli_real_escape_string($con, $_POST['genre']);
+    $duration = '3.12';
+    $path ="assets/music/" . $_FILES['song']['name'];
+    $albumOrder = 1;
+    $plays = 0;
+
+    // song file directory
+    $target = "assets/music/".basename($path);
+
+    $query = "INSERT INTO Songs (title,description,artist,album,genre,duration,path,albumOrder,plays) VALUES ('$title','$description','$artist','$album','$genre','$duration','$path','$albumOrder','$plays')";
+
+    // execute query
+    mysqli_query($con, $query);
+
+    if (move_uploaded_file($_FILES['song']['tmp_name'], $target)) {
+        $msg = "Song uploaded successfully";
+    }else{
+        $msg = "Failed to song";
+    }
+
+}
+
+?>
 
 
 
